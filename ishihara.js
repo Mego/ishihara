@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var x, y;
 
   canvas.addEventListener('mousedown', function(e) {
-    if(e.button === 0) {
+    if (e.button === 0) {
       painting = true;
   
       x = e.pageX - this.offsetLeft;
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   canvas.addEventListener('mouseup', function(e) {
-    if(e.button === 0) {
+    if (e.button === 0) {
       painting = false;
   
       x = e.pageX - this.offsetLeft;
