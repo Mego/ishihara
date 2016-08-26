@@ -106,32 +106,36 @@ document.addEventListener('DOMContentLoaded', function() {
   var x, y;
 
   canvas.addEventListener('mousedown', function(e) {
-    painting = true;
-
-    x = e.pageX - this.offsetLeft;
-    y = e.pageY - this.offsetTop;
-
-    if (generating) return;
-
-    ctx.beginPath();
-    ctx.fillStyle = e.ctrlKey ? '#FFF' : '#000';
-    ctx.arc(x, y, 7.25, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.closePath();
+    if (e.button === 0) {
+      painting = true;
+  
+      x = e.pageX - this.offsetLeft;
+      y = e.pageY - this.offsetTop;
+  
+      if (generating) return;
+  
+      ctx.beginPath();
+      ctx.fillStyle = e.ctrlKey ? '#FFF' : '#000';
+      ctx.arc(x, y, 7.25, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.closePath();
+    }
   });
   canvas.addEventListener('mouseup', function(e) {
-    painting = false;
-
-    x = e.pageX - this.offsetLeft;
-    y = e.pageY - this.offsetTop;
-
-    if (generating) return;
-
-    ctx.beginPath();
-    ctx.fillStyle = e.ctrlKey ? '#FFF' : '#000';
-    ctx.arc(x, y, 7.25, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.closePath();
+    if (e.button === 0) {
+      painting = false;
+  
+      x = e.pageX - this.offsetLeft;
+      y = e.pageY - this.offsetTop;
+  
+      if (generating) return;
+  
+      ctx.beginPath();
+      ctx.fillStyle = e.ctrlKey ? '#FFF' : '#000';
+      ctx.arc(x, y, 7.25, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.closePath();
+    }
   });
   canvas.addEventListener('mousemove', function(e) {
     if (!painting || generating) return;
