@@ -5,7 +5,7 @@ function CircleFactory() {
 
 CircleFactory.prototype.generate = function(circular_area) {
   var min_radius = (canvas.width + canvas.height) / 600;
-  var max_radius = (canvas.width + canvas.height) / 100;
+  var max_radius = (canvas.width + canvas.height) / 125;
   var radius = min_radius + Math.random() * (max_radius - min_radius);
 
   if (circular_area) {
