@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ['#E96B6C', '#F7989C'],
     ['#AD5277', '#F7989C'],
     ['#FF934F'],
-    ['#A8AA00', '#80BE28']
+    ['#A8AA00', '#78BE28']
   ];
   var colors_off =  [
     ['#9CA594', '#ACB4A5', '#BBB964', '#D7DAAA', '#E5D57D', '#D1D6AF'],
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ['#635A4A', '#817865', '#9C9C84'],
     ['#635A4A', '#817865', '#9C9C84'],
     ['#9C9C9C'],
-    ['#828200', '#669A1B']
+    ['#828200', '#609A1B']
   ];
 
   var painting = false;
